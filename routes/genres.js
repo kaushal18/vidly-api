@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-  const genre = Genre.findById(req.params.id);
+  const genre = await Genre.findById(req.params.id);
 
   if (!genre) res.status(404).send("genre with given id does not exist");
   res.send(genre);
