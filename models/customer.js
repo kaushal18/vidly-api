@@ -3,7 +3,7 @@ const Joi = require("joi");
 
 const Customer = mongoose.model(
   "Customer",
-  mongoose.Schema({
+  new mongoose.Schema({
     name: {
       type: String,
       required: true,
